@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_26fa49d2382d375ec1fb87c9560c2ec7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_26fa49d2382d375ec1fb87c9560c2ec7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_26fa49d2382d375ec1fb87c9560c2ec7 = L.map(
+                "map_26fa49d2382d375ec1fb87c9560c2ec7",
+                {
+                    center: [-3.788, 102.285],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_87ad6aba6c6ce0c503978cfed37e1879 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_87ad6aba6c6ce0c503978cfed37e1879.addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var tile_layer_a1abba83aeaba9d04d3bf88b1a5ed2e6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a1abba83aeaba9d04d3bf88b1a5ed2e6.addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var tile_layer_ade0ff68bf476a5b78841ff948c11ce0 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ade0ff68bf476a5b78841ff948c11ce0.addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var marker_297f3ca55809099ed76b699b707130e9 = L.marker(
+                [-3.7585, 102.2725],
+                {
+}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var icon_87eda1d747eeafcae7020ec5eb2eff71 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "home",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9968f5e6ec1b3174e697275e10a88929 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_23c486b70612a2d5dc2da9bbbc849199 = $(`<div id="html_23c486b70612a2d5dc2da9bbbc849199" style="width: 100.0%; height: 100.0%;"><b>POSKO UTAMA CITYCARE</b><br>Pusat Komando & Alat Berat (Area UNIB)</div>`)[0];
+                popup_9968f5e6ec1b3174e697275e10a88929.setContent(html_23c486b70612a2d5dc2da9bbbc849199);
+            
+        
+
+        marker_297f3ca55809099ed76b699b707130e9.bindPopup(popup_9968f5e6ec1b3174e697275e10a88929)
+        ;
+
+        
+    
+    
+            marker_297f3ca55809099ed76b699b707130e9.bindTooltip(
+                `<div>
+                     Posko Utama Tim Maintenance
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_297f3ca55809099ed76b699b707130e9.setIcon(icon_87eda1d747eeafcae7020ec5eb2eff71);
+            
+    
+            var circle_8bf52e7d856849c85044713c891bd5be = L.circle(
+                [-3.7592, 102.2735],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 150, "stroke": true, "weight": 2}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            circle_8bf52e7d856849c85044713c891bd5be.bindTooltip(
+                `<div>
+                     Zona Bahaya Rawan Tumbang (Radius 150m) - AST-001
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_2ef9ff3bcc42173d294bfd06977e23c6 = L.polyline(
+                [[-3.7585, 102.2725], [-3.7592, 102.2735]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var marker_fd285a6550c2eb9adbb7c43c00eef998 = L.marker(
+                [-3.7592, 102.2735],
+                {
+}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var icon_f56702f22491e6b7e24d927a2f25f1b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20e16e940b15e4f2e1404767880b899e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c48b59b36aff54476887b05f672afdbf = $(`<div id="html_c48b59b36aff54476887b05f672afdbf" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 250px; font-size: 12px;">         <h4 style="margin: 0 0 6px 0; color: #2c3e50; border-bottom: 2px solid red; padding-bottom: 4px;">             AST-001 | Arborist / Pohon         </h4>         <b>Lokasi Aset:</b> Pohon Pelindung Jl. WR Supratman (Dekat Gerbang UNIB)<br>         <b>Laporan Warga:</b> Batang miring ke jalan raya & rawan tumbang<br>         <b>Skor Kerusakan:</b> 90 / 100<br>         <b>Jarak dari Posko:</b> 135.5 meter<br>         <b>Tim Lapangan:</b> Tim Arborist (Pemangkasan/Penebangan)<br>         <b>Estimasi Biaya:</b> Rp 2.500.000<br>         <div style="margin-top: 6px; padding: 4px; background-color: red; color: white; text-align: center; font-weight: bold; border-radius: 4px;">             PRIORITAS TINGGI (Darurat)         </div>     </div>     </div>`)[0];
+                popup_20e16e940b15e4f2e1404767880b899e.setContent(html_c48b59b36aff54476887b05f672afdbf);
+            
+        
+
+        marker_fd285a6550c2eb9adbb7c43c00eef998.bindPopup(popup_20e16e940b15e4f2e1404767880b899e)
+        ;
+
+        
+    
+    
+            marker_fd285a6550c2eb9adbb7c43c00eef998.bindTooltip(
+                `<div>
+                     Klik detail: AST-001 - Pohon Pelindung Jl. WR Supratman (Dekat Gerbang UNIB)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fd285a6550c2eb9adbb7c43c00eef998.setIcon(icon_f56702f22491e6b7e24d927a2f25f1b5);
+            
+    
+            var poly_line_ed3aed46e23429427e138ae3a2c3a8e1 = L.polyline(
+                [[-3.7585, 102.2725], [-3.7615, 102.276]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var marker_accffa9075301260bc915b9f7ca90d00 = L.marker(
+                [-3.7615, 102.276],
+                {
+}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var icon_20d9c29dbd37907dc01cc2a9f1a28e0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_93c4761020fe53c0e3217a01351ddcac = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7570bc7161cf013b3845ac3c6320e7a4 = $(`<div id="html_7570bc7161cf013b3845ac3c6320e7a4" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 250px; font-size: 12px;">         <h4 style="margin: 0 0 6px 0; color: #2c3e50; border-bottom: 2px solid green; padding-bottom: 4px;">             AST-002 | Berm / Rumput         </h4>         <b>Lokasi Aset:</b> Area Rumput (Berm) Simpang Kandang Limun<br>         <b>Laporan Warga:</b> Rumput sangat tinggi menghalangi trotoar<br>         <b>Skor Kerusakan:</b> 45 / 100<br>         <b>Jarak dari Posko:</b> 511.5 meter<br>         <b>Tim Lapangan:</b> Tim Lanskap (Pemotong Rumput Kota)<br>         <b>Estimasi Biaya:</b> Rp 500.000<br>         <div style="margin-top: 6px; padding: 4px; background-color: green; color: white; text-align: center; font-weight: bold; border-radius: 4px;">             PRIORITAS RENDAH (Rutin)         </div>     </div>     </div>`)[0];
+                popup_93c4761020fe53c0e3217a01351ddcac.setContent(html_7570bc7161cf013b3845ac3c6320e7a4);
+            
+        
+
+        marker_accffa9075301260bc915b9f7ca90d00.bindPopup(popup_93c4761020fe53c0e3217a01351ddcac)
+        ;
+
+        
+    
+    
+            marker_accffa9075301260bc915b9f7ca90d00.bindTooltip(
+                `<div>
+                     Klik detail: AST-002 - Area Rumput (Berm) Simpang Kandang Limun
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_accffa9075301260bc915b9f7ca90d00.setIcon(icon_20d9c29dbd37907dc01cc2a9f1a28e0e);
+            
+    
+            var circle_2be0eac75222eebc1eb37e328d8d18c0 = L.circle(
+                [-3.7578, 102.271],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 150, "stroke": true, "weight": 2}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            circle_2be0eac75222eebc1eb37e328d8d18c0.bindTooltip(
+                `<div>
+                     Zona Bahaya Rawan Tumbang (Radius 150m) - AST-003
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_4d25a04835563ae06a5a81edc803f850 = L.polyline(
+                [[-3.7585, 102.2725], [-3.7578, 102.271]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var marker_9bdd546502f54bc4fba677e2cd8229be = L.marker(
+                [-3.7578, 102.271],
+                {
+}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var icon_7f2455ec2add9583a1c7264301d5bb81 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_08e087a1867fe2b3f0abf577a772a884 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_a3acbd3d1228768a97be078859f71e4b = $(`<div id="html_a3acbd3d1228768a97be078859f71e4b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 250px; font-size: 12px;">         <h4 style="margin: 0 0 6px 0; color: #2c3e50; border-bottom: 2px solid red; padding-bottom: 4px;">             AST-003 | Arborist / Pohon         </h4>         <b>Lokasi Aset:</b> Pohon Tua Depan Dekanat FT UNIB<br>         <b>Laporan Warga:</b> Dahan besar lapuk di atas area parkir<br>         <b>Skor Kerusakan:</b> 85 / 100<br>         <b>Jarak dari Posko:</b> 183.9 meter<br>         <b>Tim Lapangan:</b> Tim Arborist (Pemangkasan/Penebangan)<br>         <b>Estimasi Biaya:</b> Rp 2.500.000<br>         <div style="margin-top: 6px; padding: 4px; background-color: red; color: white; text-align: center; font-weight: bold; border-radius: 4px;">             PRIORITAS TINGGI (Darurat)         </div>     </div>     </div>`)[0];
+                popup_08e087a1867fe2b3f0abf577a772a884.setContent(html_a3acbd3d1228768a97be078859f71e4b);
+            
+        
+
+        marker_9bdd546502f54bc4fba677e2cd8229be.bindPopup(popup_08e087a1867fe2b3f0abf577a772a884)
+        ;
+
+        
+    
+    
+            marker_9bdd546502f54bc4fba677e2cd8229be.bindTooltip(
+                `<div>
+                     Klik detail: AST-003 - Pohon Tua Depan Dekanat FT UNIB
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9bdd546502f54bc4fba677e2cd8229be.setIcon(icon_7f2455ec2add9583a1c7264301d5bb81);
+            
+    
+            var poly_line_f6c6c3bbb6cb81fa7e8928039916690f = L.polyline(
+                [[-3.7585, 102.2725], [-3.795, 102.298]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var marker_efe5454b2686fbc79516f6e0bc614a95 = L.marker(
+                [-3.795, 102.298],
+                {
+}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var icon_116b3580b4b41f97587fe905415f0940 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fa2a688d0cb7f602951cb7421c119579 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3240f414590cf88368a14b1a7b5c3353 = $(`<div id="html_3240f414590cf88368a14b1a7b5c3353" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 250px; font-size: 12px;">         <h4 style="margin: 0 0 6px 0; color: #2c3e50; border-bottom: 2px solid orange; padding-bottom: 4px;">             AST-004 | Fasilitas Taman         </h4>         <b>Lokasi Aset:</b> Lampu & Bangku Taman Danau Dendam Tak Sudah<br>         <b>Laporan Warga:</b> Lampu taman mati & kursi rusak<br>         <b>Skor Kerusakan:</b> 65 / 100<br>         <b>Jarak dari Posko:</b> 4934.5 meter<br>         <b>Tim Lapangan:</b> Tim Teknisi Fasilitas Publik<br>         <b>Estimasi Biaya:</b> Rp 1.200.000<br>         <div style="margin-top: 6px; padding: 4px; background-color: orange; color: white; text-align: center; font-weight: bold; border-radius: 4px;">             PRIORITAS SEDANG (Terjadwal)         </div>     </div>     </div>`)[0];
+                popup_fa2a688d0cb7f602951cb7421c119579.setContent(html_3240f414590cf88368a14b1a7b5c3353);
+            
+        
+
+        marker_efe5454b2686fbc79516f6e0bc614a95.bindPopup(popup_fa2a688d0cb7f602951cb7421c119579)
+        ;
+
+        
+    
+    
+            marker_efe5454b2686fbc79516f6e0bc614a95.bindTooltip(
+                `<div>
+                     Klik detail: AST-004 - Lampu & Bangku Taman Danau Dendam Tak Sudah
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_efe5454b2686fbc79516f6e0bc614a95.setIcon(icon_116b3580b4b41f97587fe905415f0940);
+            
+    
+            var circle_fede0537c316ed53b4c1cb0073f66875 = L.circle(
+                [-3.764, 102.281],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 150, "stroke": true, "weight": 2}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            circle_fede0537c316ed53b4c1cb0073f66875.bindTooltip(
+                `<div>
+                     Zona Bahaya Rawan Tumbang (Radius 150m) - AST-005
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_740ec0da2ff35e0d6a2fa6e9ee90e9b6 = L.polyline(
+                [[-3.7585, 102.2725], [-3.764, 102.281]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var marker_a899586ee31e300a42be6a5cb036d5bd = L.marker(
+                [-3.764, 102.281],
+                {
+}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var icon_6a561607de4f46cf750abc56425349b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42b54f9b9ea94847a2d0edd4d0ae4363 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_5c08234f035523b8cc40a3d93d1d2955 = $(`<div id="html_5c08234f035523b8cc40a3d93d1d2955" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 250px; font-size: 12px;">         <h4 style="margin: 0 0 6px 0; color: #2c3e50; border-bottom: 2px solid red; padding-bottom: 4px;">             AST-005 | Arborist / Pohon         </h4>         <b>Lokasi Aset:</b> Pohon Rawan Tumbang Jl. Kalimantan (Rawa Makmur)<br>         <b>Laporan Warga:</b> Akar terangkat akibat angin kencang, darurat<br>         <b>Skor Kerusakan:</b> 95 / 100<br>         <b>Jarak dari Posko:</b> 1123.9 meter<br>         <b>Tim Lapangan:</b> Tim Arborist (Pemangkasan/Penebangan)<br>         <b>Estimasi Biaya:</b> Rp 2.500.000<br>         <div style="margin-top: 6px; padding: 4px; background-color: red; color: white; text-align: center; font-weight: bold; border-radius: 4px;">             PRIORITAS TINGGI (Darurat)         </div>     </div>     </div>`)[0];
+                popup_42b54f9b9ea94847a2d0edd4d0ae4363.setContent(html_5c08234f035523b8cc40a3d93d1d2955);
+            
+        
+
+        marker_a899586ee31e300a42be6a5cb036d5bd.bindPopup(popup_42b54f9b9ea94847a2d0edd4d0ae4363)
+        ;
+
+        
+    
+    
+            marker_a899586ee31e300a42be6a5cb036d5bd.bindTooltip(
+                `<div>
+                     Klik detail: AST-005 - Pohon Rawan Tumbang Jl. Kalimantan (Rawa Makmur)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a899586ee31e300a42be6a5cb036d5bd.setIcon(icon_6a561607de4f46cf750abc56425349b9);
+            
+    
+            var poly_line_e8d1c4fbc74efa07b78b43cfe46c8b4a = L.polyline(
+                [[-3.7585, 102.2725], [-3.812, 102.261]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var marker_38e6ce35f49cb95bc50832695cb85295 = L.marker(
+                [-3.812, 102.261],
+                {
+}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var icon_551a5286fba37d0dbcbd06f5b2f55c64 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8489bfeac9395c1c4ee39871ab993bfa = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4c3a741ae1d2becae8ad6c0e36d36b16 = $(`<div id="html_4c3a741ae1d2becae8ad6c0e36d36b16" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 250px; font-size: 12px;">         <h4 style="margin: 0 0 6px 0; color: #2c3e50; border-bottom: 2px solid green; padding-bottom: 4px;">             AST-006 | Fasilitas Taman         </h4>         <b>Lokasi Aset:</b> Taman Bermain Publik Pantai Panjang<br>         <b>Laporan Warga:</b> Cat mengelupas & perlu perawatan rutin<br>         <b>Skor Kerusakan:</b> 40 / 100<br>         <b>Jarak dari Posko:</b> 6056.8 meter<br>         <b>Tim Lapangan:</b> Tim Teknisi Fasilitas Publik<br>         <b>Estimasi Biaya:</b> Rp 500.000<br>         <div style="margin-top: 6px; padding: 4px; background-color: green; color: white; text-align: center; font-weight: bold; border-radius: 4px;">             PRIORITAS RENDAH (Rutin)         </div>     </div>     </div>`)[0];
+                popup_8489bfeac9395c1c4ee39871ab993bfa.setContent(html_4c3a741ae1d2becae8ad6c0e36d36b16);
+            
+        
+
+        marker_38e6ce35f49cb95bc50832695cb85295.bindPopup(popup_8489bfeac9395c1c4ee39871ab993bfa)
+        ;
+
+        
+    
+    
+            marker_38e6ce35f49cb95bc50832695cb85295.bindTooltip(
+                `<div>
+                     Klik detail: AST-006 - Taman Bermain Publik Pantai Panjang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_38e6ce35f49cb95bc50832695cb85295.setIcon(icon_551a5286fba37d0dbcbd06f5b2f55c64);
+            
+    
+            var poly_line_295eb9b9f1963c3887c9732498b32180 = L.polyline(
+                [[-3.7585, 102.2725], [-3.8015, 102.269]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var marker_6750cf2532fd2c2dd98bf87a463fe9ee = L.marker(
+                [-3.8015, 102.269],
+                {
+}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var icon_fd4135316f7c0775268c95f2b8920306 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8d210036ba656adbec26f62c1ad4faa = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_b1bdab01fc631da4845942c73a78b222 = $(`<div id="html_b1bdab01fc631da4845942c73a78b222" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 250px; font-size: 12px;">         <h4 style="margin: 0 0 6px 0; color: #2c3e50; border-bottom: 2px solid green; padding-bottom: 4px;">             AST-007 | Berm / Rumput         </h4>         <b>Lokasi Aset:</b> Area Rumput (Berm) Rumah Lansia Jl. Indragiri<br>         <b>Laporan Warga:</b> Warga lansia melapor tidak sanggup memangkas rumput<br>         <b>Skor Kerusakan:</b> 50 / 100<br>         <b>Jarak dari Posko:</b> 4774.3 meter<br>         <b>Tim Lapangan:</b> Tim Lanskap (Pemotong Rumput Kota)<br>         <b>Estimasi Biaya:</b> Rp 500.000<br>         <div style="margin-top: 6px; padding: 4px; background-color: green; color: white; text-align: center; font-weight: bold; border-radius: 4px;">             PRIORITAS RENDAH (Rutin)         </div>     </div>     </div>`)[0];
+                popup_d8d210036ba656adbec26f62c1ad4faa.setContent(html_b1bdab01fc631da4845942c73a78b222);
+            
+        
+
+        marker_6750cf2532fd2c2dd98bf87a463fe9ee.bindPopup(popup_d8d210036ba656adbec26f62c1ad4faa)
+        ;
+
+        
+    
+    
+            marker_6750cf2532fd2c2dd98bf87a463fe9ee.bindTooltip(
+                `<div>
+                     Klik detail: AST-007 - Area Rumput (Berm) Rumah Lansia Jl. Indragiri
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6750cf2532fd2c2dd98bf87a463fe9ee.setIcon(icon_fd4135316f7c0775268c95f2b8920306);
+            
+    
+            var circle_a67c0fd3bb6b9b24871c539276253dbe = L.circle(
+                [-3.8285, 102.316],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 150, "stroke": true, "weight": 2}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            circle_a67c0fd3bb6b9b24871c539276253dbe.bindTooltip(
+                `<div>
+                     Zona Bahaya Rawan Tumbang (Radius 150m) - AST-008
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var poly_line_1d44456cc7f7520e6cd21bc632e89dd4 = L.polyline(
+                [[-3.7585, 102.2725], [-3.8285, 102.316]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "5, 5", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var marker_b87282459b27c340ca4a432157f63b04 = L.marker(
+                [-3.8285, 102.316],
+                {
+}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+        
+    
+            var icon_8907aba1b62268dd50bfc817f11226cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0084fefb2564885000336fdc887fe8f3 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_244ae906fff46bade56186bcd4acb4c0 = $(`<div id="html_244ae906fff46bade56186bcd4acb4c0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; width: 250px; font-size: 12px;">         <h4 style="margin: 0 0 6px 0; color: #2c3e50; border-bottom: 2px solid red; padding-bottom: 4px;">             AST-008 | Arborist / Pohon         </h4>         <b>Lokasi Aset:</b> Pohon Miring Dekat RSUD M. Yunus<br>         <b>Laporan Warga:</b> Cabang pohon menyentuh kabel jaringan<br>         <b>Skor Kerusakan:</b> 88 / 100<br>         <b>Jarak dari Posko:</b> 9131.4 meter<br>         <b>Tim Lapangan:</b> Tim Arborist (Pemangkasan/Penebangan)<br>         <b>Estimasi Biaya:</b> Rp 2.500.000<br>         <div style="margin-top: 6px; padding: 4px; background-color: red; color: white; text-align: center; font-weight: bold; border-radius: 4px;">             PRIORITAS TINGGI (Darurat)         </div>     </div>     </div>`)[0];
+                popup_0084fefb2564885000336fdc887fe8f3.setContent(html_244ae906fff46bade56186bcd4acb4c0);
+            
+        
+
+        marker_b87282459b27c340ca4a432157f63b04.bindPopup(popup_0084fefb2564885000336fdc887fe8f3)
+        ;
+
+        
+    
+    
+            marker_b87282459b27c340ca4a432157f63b04.bindTooltip(
+                `<div>
+                     Klik detail: AST-008 - Pohon Miring Dekat RSUD M. Yunus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b87282459b27c340ca4a432157f63b04.setIcon(icon_8907aba1b62268dd50bfc817f11226cb);
+            
+    
+            var layer_control_c4a09ae169516b802a0f15ca238fd7ea_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_87ad6aba6c6ce0c503978cfed37e1879,
+                    "Peta Jalan (OpenStreetMap)" : tile_layer_a1abba83aeaba9d04d3bf88b1a5ed2e6,
+                    "Citra Satelit (Esri World Imagery)" : tile_layer_ade0ff68bf476a5b78841ff948c11ce0,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_c4a09ae169516b802a0f15ca238fd7ea = L.control.layers(
+                layer_control_c4a09ae169516b802a0f15ca238fd7ea_layers.base_layers,
+                layer_control_c4a09ae169516b802a0f15ca238fd7ea_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_26fa49d2382d375ec1fb87c9560c2ec7);
+
+        
+</script>
+</html>

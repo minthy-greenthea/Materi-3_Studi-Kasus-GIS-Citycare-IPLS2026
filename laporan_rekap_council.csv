@@ -1,0 +1,9 @@
+id_laporan,nama_aset,kategori,kondisi_dilaporkan,tingkat_kerusakan_skor,latitude,longitude,jarak_posko_m,status_prioritas,tim_penanganan,estimasi_anggaran
+AST-001,Pohon Pelindung Jl. WR Supratman (Dekat Gerbang UNIB),Arborist / Pohon,Batang miring ke jalan raya & rawan tumbang,90,-3.7592,102.2735,135.5,PRIORITAS TINGGI (Darurat),Tim Arborist (Pemangkasan/Penebangan),Rp 2.500.000
+AST-002,Area Rumput (Berm) Simpang Kandang Limun,Berm / Rumput,Rumput sangat tinggi menghalangi trotoar,45,-3.7615,102.276,511.5,PRIORITAS RENDAH (Rutin),Tim Lanskap (Pemotong Rumput Kota),Rp 500.000
+AST-003,Pohon Tua Depan Dekanat FT UNIB,Arborist / Pohon,Dahan besar lapuk di atas area parkir,85,-3.7578,102.271,183.9,PRIORITAS TINGGI (Darurat),Tim Arborist (Pemangkasan/Penebangan),Rp 2.500.000
+AST-004,Lampu & Bangku Taman Danau Dendam Tak Sudah,Fasilitas Taman,Lampu taman mati & kursi rusak,65,-3.795,102.298,4934.5,PRIORITAS SEDANG (Terjadwal),Tim Teknisi Fasilitas Publik,Rp 1.200.000
+AST-005,Pohon Rawan Tumbang Jl. Kalimantan (Rawa Makmur),Arborist / Pohon,"Akar terangkat akibat angin kencang, darurat",95,-3.764,102.281,1123.9,PRIORITAS TINGGI (Darurat),Tim Arborist (Pemangkasan/Penebangan),Rp 2.500.000
+AST-006,Taman Bermain Publik Pantai Panjang,Fasilitas Taman,Cat mengelupas & perlu perawatan rutin,40,-3.812,102.261,6056.8,PRIORITAS RENDAH (Rutin),Tim Teknisi Fasilitas Publik,Rp 500.000
+AST-007,Area Rumput (Berm) Rumah Lansia Jl. Indragiri,Berm / Rumput,Warga lansia melapor tidak sanggup memangkas rumput,50,-3.8015,102.269,4774.3,PRIORITAS RENDAH (Rutin),Tim Lanskap (Pemotong Rumput Kota),Rp 500.000
+AST-008,Pohon Miring Dekat RSUD M. Yunus,Arborist / Pohon,Cabang pohon menyentuh kabel jaringan,88,-3.8285,102.316,9131.4,PRIORITAS TINGGI (Darurat),Tim Arborist (Pemangkasan/Penebangan),Rp 2.500.000
